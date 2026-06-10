@@ -316,6 +316,27 @@ public class tambah_orangtua extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        if (jTextField1.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Nama Ayah Tidak Boleh Kosong !");
+            jTextField1.requestFocus();
+            return; 
+        }
+        if (jTextField2.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Nama Ibu Tidak Boleh Kosong !");
+            jTextField2.requestFocus();
+            return; 
+        }
+        if (jTextField3.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Nomor Hp Tidak Boleh Kosong !");
+            jTextField3.requestFocus();
+            return; 
+        }
+        if (jTextArea1.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Alamat Tidak Boleh Kosong !");
+            jTextArea1.requestFocus();
+            return; 
+        }
+        
             try {
                 if (idOrangTua == null || idOrangTua.equals("")) {
                     JOptionPane.showMessageDialog(null,

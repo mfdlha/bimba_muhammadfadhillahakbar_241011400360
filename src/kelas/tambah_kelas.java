@@ -285,6 +285,22 @@ public class tambah_kelas extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        if (jTextField1.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Nama Kelas Tidak Boleh Kosong !");
+            jTextField1.requestFocus();
+            return; 
+        }
+        if (jTextField2.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Jadwal Tidak Boleh Kosong !");
+            jTextField2.requestFocus();
+            return; 
+        }
+        if (jTextField3.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Pengajar Tidak Boleh Kosong !");
+            jTextField3.requestFocus();
+            return; 
+        }
+        
             try {
                 if (idKelas == null || idKelas.equals("")) {
                     JOptionPane.showMessageDialog(null,
